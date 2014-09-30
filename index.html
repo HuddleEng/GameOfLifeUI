@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Game of life</title>
+		<script src="automation.js"></script>
+		<script src="checkboxrenderer.js"></script>
+		<link type="text/css" media="screen, projection" rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="header">
+			<h1>Game of life UI</h1>
+			<p>
+				As a simple demonstration of your knowledge and experience in UI development, please complete the following task. It shouldn't take long.
+			</p>
+			<p class="instruction">
+				In the empty box provided, create a new visual representation for this Game of life using CSS in a writing convention of your choosing. The existing visualisation should continue to work. Feel free to refactor the JavaScript as needed.
+			</p>
+		</div>
+		<div class="renderers">
+			<div class="renderer" id="checkBoxRenderer"></div>
+			<div class="renderer" id="customRenderer"></div>
+		</div>
+
+		<script type="text/javascript">
+		  automation.onCellCreate(checkBoxRenderer.createCell);
+		  automation.onCellUpdate(checkBoxRenderer.drawCell);
+
+		  checkBoxRenderer.init('checkBoxRenderer', automation.size());
+
+		  automation.start();
+		</script>
+	</body>
+</html>
