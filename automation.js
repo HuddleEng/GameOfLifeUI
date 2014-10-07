@@ -17,26 +17,27 @@ var automation = (function Automation(){
 		},100);
 	}
 
-	function getIndex(index){
+	function boundLeft(index){
 		var mod = index % size;
-		if(mod === 0 || mod === 1){
-			return -1;
-		} else {
-			return index;
-		}
+		return mod === (size-1) ? -1 : index;
+	}
+
+	function boundRight(index){
+		var mod = index % size;
+		return mod === 0 ? -1 : index;
 	}
 
 	function makeCellsAware(world){
 		world.forEach(function(cell, index){
 			cell.environment = [
-				world[ getIndex(index-1) ],
-				world[ getIndex(index-size-1)],
-				world[index-size],
-				world[ getIndex(index-size+1)],
-				world[ getIndex(index+1) ],
-				world[ getIndex(index+size+1)],
-				world[index+size],
-				world[ getIndex(index+size-1) ]
+				world[ boundLeft(index-1) ],
+				world[ boundLeft(index-size-1) ],
+				world[ index-size ],
+				world[ boundRight(index-size+1) ],
+				world[ boundRight(index+1) ],
+				world[ boundRight(index+size+1) ],
+				world[ index+size ],
+				world[ boundLeft(index+size-1) ]
 			];
 		});
 	}
