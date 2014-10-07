@@ -19,6 +19,7 @@ var checkBoxRenderer = (function(){
 			
 			checkbox.type = 'checkbox';
 			checkbox.checked = 'checked';
+			checkbox.className = 'render__chk_cell';
 			
 			frag.appendChild(checkbox);
 

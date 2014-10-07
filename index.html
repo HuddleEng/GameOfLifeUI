@@ -6,27 +6,35 @@
 		<link type="text/css" media="screen, projection" rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<div class="header">
+		<div class="main main__top">
 			<h1>Game of life UI</h1>
 			<p>
-				As a simple demonstration of your knowledge and experience in UI development, please complete the following task. It shouldn't take long.
+				<a href="http://en.wikipedia.org/wiki/Conway's_Game_of_Life" target="_blank">Conway's Game of Life</a> is a zero-player game, a cellular automation.  This implementation does not allow direct configuration, refresh the page to see a new simulation.
 			</p>
 			<p class="instruction">
-				In the empty box provided, create a new visual representation for this Game of life using CSS in a writing convention of your choosing. The existing visualisation should continue to work. Feel free to refactor the JavaScript as needed.
+				In the first empty box provided, create a new visual representation for the existing simulation using CSS. It should provide a mirrored image of the existing visualisation (if the top-right cell is alive, so is the top-left of the new visualisation). Feel free to change the JavaScript and CSS as needed.
 			</p>
 		</div>
-		<div class="renderers">
-			<div class="renderer" id="checkBoxRenderer"></div>
-			<div class="renderer" id="customRenderer"></div>
+		<div class="render">
+			<div class="render__game" id="checkBoxRenderer"></div>
+			<div class="render__game" id="customRenderer1"></div>
+		</div>
+		<div class="main">
+			<p class="instruction">
+				Now create a new simulation independent of the above games, using an existing visual representation. The visualisations should work in all modern browsers.
+			</p>
+		</div>
+		<div class="render">
+			<div class="render__game" id="customRenderer2"></div>
 		</div>
 
 		<script type="text/javascript">
-		  automation.onCellCreate(checkBoxRenderer.createCell);
-		  automation.onCellUpdate(checkBoxRenderer.drawCell);
+			automation.onCellCreate(checkBoxRenderer.createCell);
+			automation.onCellUpdate(checkBoxRenderer.drawCell);
 
-		  checkBoxRenderer.init('checkBoxRenderer', automation.size());
+			checkBoxRenderer.init('checkBoxRenderer', automation.size());
 
-		  automation.start();
+			automation.start();
 		</script>
 	</body>
 </html>
