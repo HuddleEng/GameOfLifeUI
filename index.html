@@ -1,9 +1,7 @@
 <html>
 	<head>
 		<title>Game of life</title>
-		<script src="automation.js"></script>
-		<script src="checkboxrenderer.js"></script>
-		<link type="text/css" media="screen, projection" rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		<div class="main main__top">
@@ -28,13 +26,18 @@
 			<div class="render__game" id="customRenderer2"></div>
 		</div>
 
-		<script type="text/javascript">
-			automation.onCellCreate(checkBoxRenderer.createCell);
-			automation.onCellUpdate(checkBoxRenderer.drawCell);
+        <script type="module">
+            import { automation } from './automation.js';
+            import { checkBoxRenderer } from './checkboxrenderer.js';
 
-			checkBoxRenderer.init('checkBoxRenderer', automation.size());
 
-			automation.start();
-		</script>
+            automation.onCellCreate(checkBoxRenderer.createCell);
+            automation.onCellUpdate(checkBoxRenderer.drawCell);
+
+            checkBoxRenderer.init('checkBoxRenderer', automation.size());
+
+            automation.start();
+        </script>
+
 	</body>
 </html>
