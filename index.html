@@ -28,17 +28,17 @@
 			<div class="render__game" id="customRenderer2"></div>
 		</div>
 
-        <script type="module">
-            import { automation } from './automation.js';
-            import { checkBoxRenderer } from './checkboxrenderer.js';
+		<script type="module">
+			import { automation } from './automation.js';
+			import { checkBoxRenderer } from './checkboxrenderer.js';
 
-            automation.onCellCreate(checkBoxRenderer.createCell);
-            automation.onCellUpdate(checkBoxRenderer.drawCell);
+			automation.onCellCreate(checkBoxRenderer.createCell);
+			automation.onCellUpdate(checkBoxRenderer.drawCell);
 
-            checkBoxRenderer.init('checkBoxRenderer');
+			checkBoxRenderer.init('checkBoxRenderer');
 
-            automation.start();
-        </script>
+			automation.start();
+		</script>
 
 	</body>
 </html>
