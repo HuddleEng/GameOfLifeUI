@@ -16,7 +16,7 @@ export const checkBoxRenderer = {
 		checkbox.className = 'render__chk_cell';
 
 		frag.appendChild(checkbox);
-        world.push(checkbox);
+		world.push(checkbox);
 	},
 	init: function(elementId){
 		document.addEventListener('DOMContentLoaded', () => {
