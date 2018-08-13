@@ -1,26 +1,28 @@
 <html>
 	<head>
 		<title>Game of life</title>
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="page.css">
+		<link rel="stylesheet" href="gridstyle.css">
 	</head>
 	<body>
 		<div class="main main__top">
 			<h1>Game of life UI</h1>
 			<p>
-				<a href="http://en.wikipedia.org/wiki/Conway's_Game_of_Life" target="_blank">Conway's Game of Life</a> is a zero-player game, a cellular automation.  This implementation does not allow direct configuration, refresh the page to see a new simulation. Please clone or download the <a href="https://github.com/Huddle/GameOfLifeUI" target="_blank">repo</a> before starting.
+				<a href="http://en.wikipedia.org/wiki/Conway's_Game_of_Life" target="_blank">Conway's Game of Life</a> is a zero-player game, a cellular automation.  Refresh the page to see a new simulation.
 			</p>
-			<p class="instruction">
-				In the first empty box provided, create a completely new visual representation for the existing simulation using HTML and CSS. It should provide a mirrored image of the existing visualisation (if the top-right cell is alive, so is the top-left of the new visualisation). You will need to understand and modify the existing JavaScript and CSS.
-			</p>
+			<ol class="instruction">
+				<li>In the first empty box provided, create a completely new visual representation for the existing simulation using a &lt;div&gt; tag.</li>
+				<li>Now mirror the new visualisation (if the top-right cell of the old visualisation is alive, so is the top-left of the new visualisation).</li>
+			</ol>
 		</div>
 		<div class="render">
 			<div class="render__game" id="checkBoxRenderer"></div>
 			<div class="render__game" id="customRenderer1"></div>
 		</div>
 		<div class="main">
-			<p class="instruction">
-				Now create a new simulation independent of the above games, using your newly created visualisation. The visualisations should work in the latest version of Chrome.
-			</p>
+			<ol class="instruction" start="3">
+				<li>Now create a new simulation independent of the above games, using your newly created visualisation.</li>
+			</ol>
 		</div>
 		<div class="render">
 			<div class="render__game" id="customRenderer2"></div>
@@ -30,11 +32,10 @@
             import { automation } from './automation.js';
             import { checkBoxRenderer } from './checkboxrenderer.js';
 
-
             automation.onCellCreate(checkBoxRenderer.createCell);
             automation.onCellUpdate(checkBoxRenderer.drawCell);
 
-            checkBoxRenderer.init('checkBoxRenderer', automation.size());
+            checkBoxRenderer.init('checkBoxRenderer');
 
             automation.start();
         </script>

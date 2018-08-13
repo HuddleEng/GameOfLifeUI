@@ -1,6 +1,5 @@
 const world = [];
 const frag = document.createDocumentFragment();
-let size;
 
 export const checkBoxRenderer = {
 	drawCell: function(cell, index){
@@ -18,15 +17,10 @@ export const checkBoxRenderer = {
 
 		frag.appendChild(checkbox);
         world.push(checkbox);
-
-		if(index % size === 0){
-			frag.appendChild( document.createElement( 'br' ) );
-		}
 	},
-	init: function(id, worldSize){
-		size = worldSize;
+	init: function(elementId){
 		document.addEventListener('DOMContentLoaded', () => {
-			const element = document.getElementById(id);
+			const element = document.getElementById(elementId);
 			element.appendChild(frag);
 		}, false);
 
