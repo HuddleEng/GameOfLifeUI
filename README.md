@@ -7,6 +7,6 @@ http://huddleeng.github.io/GameOfLifeUI/
 
 ## Local development
 ```
-npm run init
+npm install
 npm start
 ```
