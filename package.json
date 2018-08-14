@@ -2,13 +2,15 @@
   "name": "gameoflifeui",
   "version": "1.0.0",
   "scripts": {
-    "init": "npm install http-server -g",
-    "start": "http-server"
+    "start": "serve"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HuddleEng/GameOfLifeUI.git"
   },
   "author": "Huddle",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "serve": "^9.4.2"
+  }
 }
