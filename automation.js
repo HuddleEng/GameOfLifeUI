@@ -1,5 +1,7 @@
 import {createWorld, updateWorld} from './gol.js';
 
+const size = 48;
+
 let onUpdate = () => {};
 let onCreate = () => {};
 
