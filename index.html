@@ -16,8 +16,8 @@
 			</ol>
 		</div>
 		<div class="render">
-			<div class="render__game" id="checkBoxRenderer"></div>
-			<div class="render__game" id="customRenderer1"></div>
+			<div class="render__game" id="boxElement1"></div>
+			<div class="render__game" id="boxElement2"></div>
 		</div>
 		<div class="main">
 			<ol class="instruction" start="3">
@@ -25,7 +25,7 @@
 			</ol>
 		</div>
 		<div class="render">
-			<div class="render__game" id="customRenderer2"></div>
+			<div class="render__game" id="boxElement3"></div>
 		</div>
 
 		<script type="module">
@@ -35,7 +35,7 @@
 			automation.onCellCreate(checkBoxRenderer.createCell);
 			automation.onCellUpdate(checkBoxRenderer.drawCell);
 
-			checkBoxRenderer.init('checkBoxRenderer');
+			checkBoxRenderer.init('boxElement1');
 
 			automation.start();
 		</script>
