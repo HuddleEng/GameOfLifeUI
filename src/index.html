@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>Game of life</title>
+		<link rel="stylesheet" href="css/page.css">
+		<link rel="stylesheet" href="css/gridstyle.css">
+	</head>
+	<body>
+		<div class="main main__top">
+			<h1>Game of life UI</h1>
+			<p>
+				<a href="http://en.wikipedia.org/wiki/Conway's_Game_of_Life" target="_blank">Conway's Game of Life</a> is a zero-player game, a cellular automation.  Refresh the page to see a new simulation.
+			</p>
+			<ol class="instruction">
+				<li>In the first empty box provided, create a completely new visual representation for the existing simulation using a &lt;div&gt; tag.</li>
+				<li>Now mirror the new visualisation (if the top-right cell of the old visualisation is alive, so is the top-left of the new visualisation).</li>
+			</ol>
+		</div>
+		<div class="render">
+			<div class="render__game" id="boxElement1"></div>
+			<div class="render__game" id="boxElement2"></div>
+		</div>
+		<div class="main">
+			<ol class="instruction" start="3">
+				<li>Now create a new simulation independent of the above games, using your newly created visualisation.</li>
+			</ol>
+		</div>
+		<div class="render">
+			<div class="render__game" id="boxElement3"></div>
+		</div>
+
+		<script type="module" src="./js/main.js"></script>
+
+	</body>
+</html>
