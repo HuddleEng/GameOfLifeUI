@@ -11,6 +11,6 @@
   "author": "Huddle",
   "license": "MIT",
   "dependencies": {
-    "serve": "^9.4.2"
+    "serve": "^9.6.0"
   }
 }
